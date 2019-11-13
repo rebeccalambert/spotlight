@@ -4,21 +4,25 @@ body {
 
 }
 
-.content {
+.picture {
     position: relative;
     width: 100%;
     height: 100vh;
     background: url(../landscape.jpg);
     background-size: cover;
+    filter: grayscale(0%);
+}
+
+.dull {
     filter: grayscale(100%);
 }
 
-.colorspot {
+/* .colorspot {
     display: none;
     position: absolute;
     background: url(../landscape.jpg);
-    /* filter: grayscale(0%); */
-}
+    filter: grayscale(0%);
+} */
 
 /* 
 .spotlight {
