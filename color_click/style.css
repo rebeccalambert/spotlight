@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+.picture {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../landscape.jpg);
+    background-size: cover;
+    filter: grayscale(0%);
+}
+
+.dull {
+    filter: grayscale(100%);
+}
+
+/* .colorspot {
+    display: none;
+    position: absolute;
+    background: url(../landscape.jpg);
+    filter: grayscale(0%);
+} */
+
+/* 
+.spotlight {
+    display: none;
+    position: absolute;
+    background: url(../landscape.jpg) no-repeat 0 0;
+} */

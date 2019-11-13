@@ -5,61 +5,21 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <!-- <div id="colored" > -->
-
-            <div class="picture">
-                <!-- <div class="spotlight"></div> -->
-            </div>
-
-        <!-- </div> -->
         
+        <section>
+            <div class="spot"></div>
+        </section>
 
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
         <script type="text/javascript">
 
-            document.addEventListener("click", function(){
-                console.log("clicked")
-                document.querySelector(".picture").classList.toggle("dull")
-            });
-
-            // (document).on("click", ".dull", function(e) {
-            //     console.log("hit click")
-            // })
-
-            // $(document).mousemove(function(e) {
-            //     $('.spotlight').width(spotlightDiameter + 'px')
-            //                 .height(spotlightDiameter + 'px')
-            //                 .css({ filter: greyscale(0 + "%") });
-
-
-            //     var X = e.pageX;
-            //     var Y = e.pageY;
-            //     $(".spotlight").css("background", "radial-gradient(circle at "+X+"px "+Y+"px, transparent, transparent 20%)")  // the number at the end is what defines size of spotlight
-
-
-                // $(".spotlight").css("filter: greyscale(0%);", "radial-gradient(circle at "+X+"px "+Y+"px, transparent, rgba(0, 0, 0, 0.97) 20%)")  // the number at the end is what defines size of spotlight
-            // })
-
-
-            // let spotlightDiameter = 30;
-
-            // function createSpotlight() {
-            //     $('.spotlight').width(spotlightDiameter + 'px')
-            //                 .height(spotlightDiameter + 'px')
-            //                 .css({ filter: greyscale(0 + "%") });
-            // }
-
-
-            // Mousemove
-            // $('.content').mousemove(function(e) {
-            //     var X = e.pageX;
-            //     var Y = e.pageY;
-
-            //     $('.spotlight').css({left: X + 'px', top: Y + 'px',
-            //                         backgroundPosition: -X + 'px ' + -Y + 'px'}).show();
-            // });
-
+            $(document).mousemove(function(e) {
+                var X = e.pageX;
+                var Y = e.pageY;
+                // $(".dulled").css("background", "radial-gradient(circle at "+X+"px "+Y+"px, transparent, rgba(0, 0, 0, 0.97) 20%)")  // the number at the end is what defines size of spotlight
+            })
+            
         </script>
-
     </body>
 
 </html>
