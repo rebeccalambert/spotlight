@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../colors.jpg);
+    background-size: cover;
+}
+
+/* 
+.dulled {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%); 
+    
+    background-color: rgba(0, 0, 0, 0.3) 
+} */
+
+/* .spot {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid white;
+
+    position: absolute;
+    mix-blend-mode: screen;
+    background-image: url(../colors.jpg);
+    background-color: white;
+    
+    
+} */
+
+.testing {
+    background-color: white;
+    font-size: 12vw; 
+    font-weight: bolder;
+    padding: 50px;
+    
+    width: 30%;
+    text-align: center;
+    position: absolute;
+   
+    mix-blend-mode: screen;
+}
+
+
+/* .picture {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../landscape.jpg);
+    background-size: cover;
+    filter: grayscale(0%);
+} */

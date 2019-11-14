@@ -5,22 +5,63 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-
-        <section>
-            <div class="testing">colors</div>
-        </section>
-
+        <div class="content">
+            <div class="spotlight"></div>
+        </div>
+        
         <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
         <script type="text/javascript">
 
-            $(document).mousemove(function(e) {
-                var X = e.pageX - 75;
-                var Y = e.pageY - 75;
-                $(".testing").css("top", `${Y}px`)  
-                $(".testing").css("left", `${X}px`)  
-                // $(".spot").css("background", `transparent`)  
-            })
-            
+            // Global variables
+var spotlightDiameter = 150;
+
+
+// Verify that the mouse event wasn't triggered by a descendant.
+function verifyMouseEvent(e, elem) {
+    e = e || window.event;
+    var related = e.relatedTarget || e.toElement;
+
+    while ((related != undefined) &&
+           (related != elem) &&
+           (related.nodeName != 'BODY'))
+    {
+        related = related.parentNode;
+    }
+    return (related != elem);
+}
+
+
+// Create the spotlight
+function createSpotlight() {
+    $('.spotlight').width(spotlightDiameter + 'px')
+                   .height(spotlightDiameter + 'px')
+                   .css({borderRadius: (spotlightDiameter >> 1) + 'px'});
+}
+
+
+// Mousemove
+$('.content').on('mousemove', function(e){
+    var center = {x: e.pageX - this.offsetLeft,
+                  y: e.pageY - this.offsetTop};
+    var x = center.x - (spotlightDiameter >> 1);
+    var y = center.y - (spotlightDiameter >> 1);
+
+    $('.spotlight').css({left: x + 'px', top: y + 'px',
+                          backgroundPosition: -x + 'px ' + -y + 'px'}).show();
+});
+
+
+// Mouseover
+$('.content').on('mouseout', function(e){
+    if (!verifyMouseEvent(e, this)) return;
+    $('.spotlight').hide();
+});
+
+
+$(document).ready(function(){
+    createSpotlight();
+});
+
         </script>
     </body>
 
