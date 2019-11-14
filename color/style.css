@@ -12,38 +12,35 @@ section {
     background-size: cover;
 }
 
+/* 
 .dulled {
-    /* position: absolute;
+    position: absolute;
     width: 100%;
     height: 100%;
-    filter: grayscale(100%); */
+    filter: grayscale(100%); 
     
-    /* background-color: rgba(0, 0, 0, 0.3)  */
-}
+    background-color: rgba(0, 0, 0, 0.3) 
+} */
 
-.spot {
+/* .spot {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     border: 1px solid white;
 
     position: absolute;
-    /* mix-blend-mode: screen; */
-
+    mix-blend-mode: screen;
+    background-image: url(../colors.jpg);
     background-color: white;
     
     
-}
+} */
 
 .testing {
     background-color: white;
-    /* color: black; */
-    font-size: 8vw; 
-    font-weight: bold;
+    font-size: 12vw; 
+    font-weight: bolder;
     padding: 50px;
-    /* width: 150px;
-    height: 150px;
-    border-radius: 50%; */
     
     width: 30%;
     text-align: center;
