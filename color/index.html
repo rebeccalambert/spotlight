@@ -13,54 +13,36 @@
         <script type="text/javascript">
 
             // Global variables
-var spotlightDiameter = 150;
+            let spotlightDiameter = 300;
+
+            // Create the spotlight
+            // function createSpotlight() {
+            //     $('.spotlight').width(spotlightDiameter + 'px')
+            //                 .height(spotlightDiameter + 'px')
+            // }
 
 
-// Verify that the mouse event wasn't triggered by a descendant.
-function verifyMouseEvent(e, elem) {
-    e = e || window.event;
-    var related = e.relatedTarget || e.toElement;
+            // Mousemove
+            $('.content').on('mousemove', function(e){
+                let center = {x: e.pageX - this.offsetLeft,
+                            y: e.pageY - this.offsetTop};
+                let x = center.x - (spotlightDiameter >> 1);
+                let y = center.y - (spotlightDiameter >> 1);
 
-    while ((related != undefined) &&
-           (related != elem) &&
-           (related.nodeName != 'BODY'))
-    {
-        related = related.parentNode;
-    }
-    return (related != elem);
-}
+                $('.spotlight').css({left: x + 'px', top: y + 'px',
+                                    backgroundPosition: -x + 'px ' + -y + 'px'}).show();
+            });
 
 
-// Create the spotlight
-function createSpotlight() {
-    $('.spotlight').width(spotlightDiameter + 'px')
-                   .height(spotlightDiameter + 'px')
-                   .css({borderRadius: (spotlightDiameter >> 1) + 'px'});
-}
+            // Mouseover
+            $('.content').on('mouseout', function(e){
+                $('.spotlight').hide();
+            });
 
 
-// Mousemove
-$('.content').on('mousemove', function(e){
-    var center = {x: e.pageX - this.offsetLeft,
-                  y: e.pageY - this.offsetTop};
-    var x = center.x - (spotlightDiameter >> 1);
-    var y = center.y - (spotlightDiameter >> 1);
-
-    $('.spotlight').css({left: x + 'px', top: y + 'px',
-                          backgroundPosition: -x + 'px ' + -y + 'px'}).show();
-});
-
-
-// Mouseover
-$('.content').on('mouseout', function(e){
-    if (!verifyMouseEvent(e, this)) return;
-    $('.spotlight').hide();
-});
-
-
-$(document).ready(function(){
-    createSpotlight();
-});
+            // $(document).ready(function(){
+            //     createSpotlight();
+            // });
 
         </script>
     </body>
