@@ -2,7 +2,7 @@
     position: relative;
     width: 640px;
     height: 480px;
-    background: url("../sunrise_bw.png") no-repeat 0 0;
+    background: url("../sunrise_bw.jpeg") no-repeat 0 0;
     overflow: hidden;
 }
 .spotlight {
