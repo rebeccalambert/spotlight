@@ -30,3 +30,30 @@ body {
     position: absolute;
     background: url(../landscape.jpg) no-repeat 0 0;
 } */
+
+
+.menu {
+    position: absolute;
+    z-index: 10;
+    color: white;
+    bottom: 10px;
+    display: flex;
+    left: 10px;
+    justify-content: space-between;
+    width: 500px;
+    text-decoration: none;
+    background: rgba(56, 55, 55, 0.527);
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+a {
+    text-decoration: none;
+    color: grey
+}
+a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    color: whitesmoke
+}
